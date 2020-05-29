@@ -46,7 +46,7 @@ alias web='cd ~/Documents/websites-clients/PCwebsite/ && l'
 alias retry='py ~/Documents/project_5/purBeurre/uninstall.py && py ~/Documents/project_5/purBeurre/install.py'
 
 #faster zsh
-alias fzh='py ~/Documents/faster-zsh/alias_starter.py'
+alias fzsh='py ~/Documents/faster-zsh/alias_starter.py'
 alias hello='py ~/Documents/faster-zsh/hello.py && doc'
 alias gitnew='hub init && hub create'
 alias gitdel='fzsh gitdel'
