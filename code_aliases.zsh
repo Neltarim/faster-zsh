@@ -76,7 +76,7 @@ alias pgstart='sudo -i -u postgres'
 alias pgnew='sudo createdb -O neltarim'
 
 #mysql
-alias mysql='sudo mysql -h localhost -u root -p'
+alias mysqlconsole='sudo mysql -h localhost -u root -p'
 
 #keyboard control
 alias xin='xinput set-prop 9 305 1'
