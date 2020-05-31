@@ -1,5 +1,5 @@
 from os import system as sc
-from os import chdir
+from os import getcwd, path, chdir, listdir
 import logging
 
 from lib.git_c import gitPush
@@ -75,3 +75,4 @@ def apt():
 
 def profile_edit():
     sc("vs ~/Documents/faster-zsh/lib/profile.py")
+

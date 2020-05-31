@@ -1,9 +1,13 @@
 from tools.const import bcolors
+from getpass import getpass
 
 
 def color():
     bc = bcolors()
     bc.colortest()
+
+def question(str):
+    prompt
 
 def prompt(string, type="header", plus=None):
 
@@ -39,7 +43,21 @@ def prompt(string, type="header", plus=None):
         exit()
 
     fprompt += bcolors.ENDC
-    print(fprompt + string)
+
+    if plus == "input":
+        print(fprompt + string, end="")
+        ans = input()
+
+        return ans
+
+    elif plus == "password":
+        str = fprompt + string
+        pwd = getpass(str)
+
+        return pwd
+
+    else:
+        print(fprompt + string)
 
 
 

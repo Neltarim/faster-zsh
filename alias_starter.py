@@ -8,7 +8,7 @@ from lib import zsh_c
 
 FUNC = {
     "noArg" : {
-        "msql"      :   db.mysql,
+        "msqlscript":   db.msqlScript,
         "gitpush"   :   git_c.gitPush,
         "gitdel"    :   git_c.gitdel,
         "hardpush"  :   git_c.hardpush,
