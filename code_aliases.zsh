@@ -59,7 +59,7 @@ alias gitimport='fzsh gitimport'
 alias gitrez='fzsh gitreload'
 alias hardpush='fzsh hardpush'
 alias apt='fzsh apt'
-alias mysqlScript='fzsh msqlScript'
+alias mysqlscript='fzsh msqlscript'
 alias gitapi='py ~/Documents/python-learning/API/github_API.py'
 
 #pip
