@@ -36,7 +36,7 @@ alias mk='mkdir'
 alias doc='cd ~/Documents/ && l'
 alias term='gnome-terminal'
 alias aliasup='py ~/Documents/faster-zsh/alias_starter.py aliasup'
-alias ap='cd ~/Documents/project_5/purBeurre/core && l'
+alias ap='cd ~/Documents/project_5/core && l'
 alias learn='cd ~/Documents/python-learning/advanced && l'
 alias pp='cd ~/Documents/faster-zsh/ && l'
 alias trash='cd ~/Documents/trash/ && l'
@@ -60,6 +60,7 @@ alias gitrez='fzsh gitreload'
 alias hardpush='fzsh hardpush'
 alias apt='fzsh apt'
 alias mysqlscript='fzsh msqlscript'
+alias mysqlconsole='sudo mysql -h localhost -u root -p'
 alias gitapi='py ~/Documents/python-learning/API/github_API.py'
 
 #pip
@@ -71,12 +72,12 @@ alias freeze='pip3 freeze > requirements.txt'
 alias djangonew='django-admin startproject'
 alias djangostart='python3 manage.py runserver'
 
+#mysql
+alias sqleasyscript='mysql -h localhost -u root'
+
 #postgres
 alias pgstart='sudo -i -u postgres'
 alias pgnew='sudo createdb -O neltarim'
-
-#mysql
-alias mysqlconsole='sudo mysql -h localhost -u root -p'
 
 #keyboard control
 alias xin='xinput set-prop 9 305 1'
