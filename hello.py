@@ -4,7 +4,8 @@ from os import system as sc
 import logging
 
 from lib.profile import USR_NAME, QWERTY_ON_I3, DEFAULT_BRIGHT
-from lib.zsh_c import forceTapping, workspace_loader, prompt, bright
+from lib.zsh_c import forceTapping, prompt
+from lib.ithree import workspace_loader, bright
 
 
 logging.basicConfig(level=logging.INFO)

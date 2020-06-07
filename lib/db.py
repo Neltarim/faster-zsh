@@ -35,7 +35,7 @@ def msqlScript():
         cursor.execute(query)
         conn.close()
         
-    sc("sudo mysql -h {} -u {} -p{} {} < {}".format(prof.host, prof.usr, prof.db, prof.pwd, prof.script))
+    sc("sudo mysql -h {} -u root -p{} {} < {}".format(prof.host, prof.pwd, prof.db, prof.script))
 
 
 def msqlconnect():

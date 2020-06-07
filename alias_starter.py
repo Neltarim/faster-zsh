@@ -2,6 +2,7 @@ from sys import argv
 
 from tools.termup import prompt, color
 from lib import db
+from lib import ithree
 from lib import git_c
 from lib import zsh_c
 
@@ -14,22 +15,24 @@ FUNC = {
         "hardpush"  :   git_c.hardpush,
         "aliassave" :   zsh_c.aliassave,
         "xin"       :   zsh_c.forceTapping,
-        "wload"     :   zsh_c.workspace_loader,
+        "wload"     :   ithree.workspace_loader,
         "color"     :   color,
         "aliasup"   :   zsh_c.aliasup,
         "apt"       :   zsh_c.apt,
-        "profile"   :   zsh_c.profile_edit
+        "profile"   :   zsh_c.profile_edit,
+        "bastion"   :   ithree.bastion,
+        "scout"     :   ithree.scout,
     },
 
     "oneArg" : {
         "rmpr"      :   git_c.rmpr,
         "gitreload" :   git_c.gitreload,
-        "bright"    :   zsh_c.bright
+        "bright"    :   ithree.bright,
         
     },
     "twoArg" : {
         "chnpr"     :   git_c.chnpr,
-        "gitimport" :   git_c.gitimport
+        "gitimport" :   git_c.gitimport,
     }
 }
 

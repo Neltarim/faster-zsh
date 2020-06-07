@@ -23,7 +23,7 @@ DEFAULT_BRIGHT = "8"
 class msql_profile():
     def __init__(self):
         self.host   = "localhost"
-        self.usr    = "root"
+        self.usr    = "neltarim"
         self.pwd    = None
         self.db     = None
         self.script = None

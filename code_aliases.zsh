@@ -36,7 +36,7 @@ alias mk='mkdir'
 alias doc='cd ~/Documents/ && l'
 alias term='gnome-terminal'
 alias aliasup='py ~/Documents/faster-zsh/alias_starter.py aliasup'
-alias ap='cd ~/Documents/project_5/ && l'
+alias ap='cd ~/Documents/Project_5/ && l'
 alias learn='cd ~/Documents/python-learning/advanced && l'
 alias pp='cd ~/Documents/faster-zsh/ && l'
 alias trash='cd ~/Documents/trash/ && l'
@@ -62,6 +62,9 @@ alias apt='fzsh apt'
 alias mysqlscript='fzsh msqlscript'
 alias mysqlconsole='sudo mysql -h localhost -u root -p'
 alias gitapi='py ~/Documents/python-learning/API/github_API.py'
+alias xin='fzsh xin'
+alias bastion='fzsh bastion'
+alias scout='fzsh scout'
 
 #pip
 alias pip='sudo pip3'
@@ -80,7 +83,7 @@ alias pgstart='sudo -i -u postgres'
 alias pgnew='sudo createdb -O neltarim'
 
 #keyboard control
-alias xin='xinput set-prop 9 305 1'
+#alias xin='xinput set-prop 9 305 1'
 alias fr='setxkbmap fr'
 alias us='setxkbmap us'
 
