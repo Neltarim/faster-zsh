@@ -22,12 +22,15 @@ FUNC = {
         "profile"   :   zsh_c.profile_edit,
         "bastion"   :   ithree.bastion,
         "scout"     :   ithree.scout,
+        "msqlreset" :   db.kill_process_list,
     },
 
     "oneArg" : {
         "rmpr"      :   git_c.rmpr,
         "gitreload" :   git_c.gitreload,
         "bright"    :   ithree.bright,
+        "quicksql"  :   db.quick_sql_query,
+        "wmove"     :   ithree.wmove,
         
     },
     "twoArg" : {

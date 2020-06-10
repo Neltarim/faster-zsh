@@ -33,8 +33,21 @@ def bright(bright_lvl):
 
 def bastion():
     print("Moving this workspace to bastion screen.")
-    sc("i3-msg move workspace to output left")
+    sc("xrandr --output {} --auto --right-of {}".format(DISPLAYS[1], DISPLAYS[0]))
+    sc("i3-msg move workspace to output right")
 
 def scout():
     print("Moving this workspace to scout screen.")
     sc("i3-msg move workspace to output right")
+    sc("xrandr --output {} --off".format(DISPLAYS[1]))
+
+def wmove(side):
+
+    if side == "down":
+        side = "left"
+
+    elif side == "up":
+        side = "right"
+
+    sc("i3-msg move workspace to output " + side)
+    prompt("Workspace moved.")

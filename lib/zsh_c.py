@@ -1,9 +1,10 @@
 from os import system as sc
 from os import getcwd, path, chdir, listdir
+import mysql.connector
 import logging
 
 from lib.git_c import gitPush
-from lib.profile import USR_NAME, ZSH_CUSTOM_PATH, PROP_9_TAP
+from lib.profile import USR_NAME, ZSH_CUSTOM_PATH, PROP_9_TAP, msql_profile
 from tools.termup import prompt
 
 logging.basicConfig(level=logging.INFO)
