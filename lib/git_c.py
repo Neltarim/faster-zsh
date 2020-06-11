@@ -3,6 +3,7 @@ from os import getcwd, path, chdir, listdir
 from os.path import isdir, exists
 
 from lib.profile import GIT_ROOT, PERSONAL_GIT_URL, USR_NAME
+from lib.zsh_c import delete_pycache
 from tools.termup import prompt
 
 
@@ -89,6 +90,8 @@ def rmpr(pr_name):
 
 def gitPush(com=None):
     """Push all the files to git with origin master"""
+
+    delete_pycache()
     
     if com == None:
         com = input("Commit :")
@@ -115,6 +118,7 @@ def gitreload(repo_name):
 
 
 def hardpush():
+    prompt("THIS FUNCTION IS SILLY. DON'T USE IT.", type="warning", plus="bold")
     DOC_PATH = "/home/{}/Documents".format(USR_NAME)
     chdir(DOC_PATH)
     dirs = listdir(DOC_PATH)

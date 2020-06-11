@@ -23,6 +23,7 @@ FUNC = {
         "bastion"   :   ithree.bastion,
         "scout"     :   ithree.scout,
         "msqlreset" :   db.kill_process_list,
+        "delcache"  :   zsh_c.delete_pycache,
     },
 
     "oneArg" : {
@@ -31,6 +32,7 @@ FUNC = {
         "bright"    :   ithree.bright,
         "quicksql"  :   db.quick_sql_query,
         "wmove"     :   ithree.wmove,
+        "killport"  :   zsh_c.kill_port,
         
     },
     "twoArg" : {

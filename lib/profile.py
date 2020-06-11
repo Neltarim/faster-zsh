@@ -15,7 +15,7 @@ PERSONAL_GIT_URL = "{}{}/".format(GIT_ROOT, USR_NAME)
 
 ###### MANUAL ##########
 
-
+FZSH_PATH = DOC_PATH + "/faster-zsh"
 DISPLAYS = ["eDP-1", "HDMI-1"] #append the list with the name of your displays
 WORKSPACES = [2,1] #append the list if you want to save more workspaces
 QWERTY_ON_I3 = True #if you want to setup your keyboard on qwerty with i3

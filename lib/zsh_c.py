@@ -1,10 +1,10 @@
 from os import system as sc
-from os import getcwd, path, chdir, listdir
+from os import getcwd, chdir, listdir
+from os.path import isdir
 import mysql.connector
 import logging
 
-from lib.git_c import gitPush
-from lib.profile import USR_NAME, ZSH_CUSTOM_PATH, PROP_9_TAP, msql_profile
+from lib.profile import USR_NAME, ZSH_CUSTOM_PATH, PROP_9_TAP, msql_profile, FZSH_PATH
 from tools.termup import prompt
 
 logging.basicConfig(level=logging.INFO)
@@ -49,3 +49,35 @@ def apt():
 def profile_edit():
     sc("vs ~/Documents/faster-zsh/lib/profile.py")
 
+def kill_port(port):
+    sc("sudo fuser -k {}/tcp".format(port))
+
+def pcache_lister(path, pc_lst=[]):
+    
+    dirs = listdir(path)
+
+    for file in dirs:
+        if file == "__pycache__":
+            pc_lst.append(path + "/" + file)
+            pass
+
+        if isdir(path + "/" + file) == True:
+            new_path = path + "/" + file
+            pcache_lister(new_path, pc_lst=pc_lst)
+
+    return pc_lst
+
+def delete_pycache():
+
+    root_path = getcwd()
+    pc_lst = pcache_lister(root_path)
+
+    for cache in pc_lst:
+        prompt("Deleting {} ...".format(cache))
+        sc("sudo rm -rf " + cache)
+
+    if pc_lst == []:
+        prompt("No pycache detected.", type="fail", plus="bold")
+
+    else:
+        prompt("All pycaches has been deleted.", type="okgreen")
