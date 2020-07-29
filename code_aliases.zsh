@@ -4,9 +4,10 @@ alias src='source ~/.zshrc'
 alias aliasshow='cat ~/.oh-my-zsh/custom/code_aliases.zsh'
 alias aliassave='py ~/Documents/faster-zsh/alias_starter.py aliassave'
 
-#wifi
+#network
 alias wifi='nmcli'
 alias wifisaved='nmcli c'
+alias scanport='sudo netstat -lpn |grep'
 
 #python
 alias py='python3'
@@ -47,7 +48,6 @@ alias retry='py ~/Documents/project_5/purBeurre/uninstall.py && py ~/Documents/p
 
 #faster zsh
 alias fzsh='py ~/Documents/faster-zsh/alias_starter.py'
-alias hello='py ~/Documents/faster-zsh/hello.py && doc'
 alias gitnew='hub init && hub create'
 alias gitdel='fzsh gitdel'
 alias gitpush='fzsh gitpush'
@@ -71,15 +71,26 @@ alias msqlreset='fzsh msqlreset'
 alias wmove='fzsh wmove'
 alias killport='fzsh killport'
 alias delcache='fzsh delcache'
+alias brightfor='fzsh brightfor'
+alias newflask='fzsh newflask'
+alias exponew='fzsh exponew'
 
 #pip
 alias pip='sudo pip3'
 alias pipm='python3 -m pip3'
 alias freeze='pip3 freeze > requirements.txt'
 
-#django
+#django & flask
 alias djangonew='django-admin startproject'
 alias djangostart='python3 manage.py runserver'
+alias djangomigrate='python3 manage.py migrate'
+alias newapp='django-admin startapp'
+
+alias flask='FLASK_APP=run.py flask'
+
+#JavaScript
+alias npm='sudo npm'
+alias reactnew='sudo create-react-app'
 
 #mysql
 alias sqleasyscript='mysql -h localhost -u root'
@@ -93,9 +104,10 @@ alias pgnew='sudo createdb -O neltarim'
 alias fr='setxkbmap fr'
 alias us='setxkbmap us'
 
-#Windows tilling manager
+#i3 windows tilling manager
 alias wsave='i3-save-tree --workspace 1 > ~/.i3/workspace-1.json'
 alias isave='i3-resurrect save -w'
 alias iload='i3-resurrect restore -w'
 alias chrome='i3-resurrect restore -w 2'
 alias logout='gnome-session-quit'
+alias autosleep='xset -dpms'
