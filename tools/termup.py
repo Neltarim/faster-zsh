@@ -3,6 +3,7 @@ from getpass import getpass
 
 
 def color():
+    """ Print all availables colors. """
     bc = bcolors()
     bc.colortest()
 
@@ -39,7 +40,7 @@ def prompt(string, type="header", plus=None):
         fprompt += bcolors.FAIL + "{Faster-zsh}ERROR :"
 
     else:
-        prompt("ERROR: basic prompt use case: prompt(string, type=\"header\", plus=None)", type="fail", plus="bold")
+        prompt("Basic prompt use case: prompt(string, type=\"header\", plus=None)", type="fail", plus="bold")
         exit()
 
     fprompt += bcolors.ENDC

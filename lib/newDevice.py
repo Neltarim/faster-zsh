@@ -7,8 +7,9 @@ from lib.zsh_c import prompt
 
 ############# CONSTANTES #####################
 
+ROOT = "~/Documents/"
 OMZ_GIT = "https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh"
-OMZ_PROFILE_GIT = "http://github.com/Neltarim/zsh-profile.git"
+FZSH_GIT = "http://github.com/Neltarim/faster-zsh.git"
 CHROME = "google-chrome-stable"
 APT = "sudo apt-get install "
 
@@ -24,6 +25,6 @@ prompt("installing oh-my-zsh ...")
 sc("sh -c \"$(curl -fsSL {})\"".format(OMZ_GIT))
 
 prompt("Installing custom ZSH profile ...")
-sc("git clone {}".format(OMZ_PROFILE_GIT))
+sc("git clone {}".format(FZSH_GIT))
 sc("cp ./zsh-profile/code_aliases.zsh ~/.oh-my-zsh/custom/")
 sc("source ~/zshrc")

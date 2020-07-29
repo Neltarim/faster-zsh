@@ -5,10 +5,12 @@ from lib import db
 from lib import ithree
 from lib import git_c
 from lib import zsh_c
+from lib import py_pr
+from lib import js
 
 
-FUNC = {
-    "noArg" : {
+FUNC = [
+    {
         "msqlscript":   db.msqlScript,
         "gitpush"   :   git_c.gitPush,
         "gitdel"    :   git_c.gitdel,
@@ -26,36 +28,38 @@ FUNC = {
         "delcache"  :   zsh_c.delete_pycache,
     },
 
-    "oneArg" : {
+    {
         "rmpr"      :   git_c.rmpr,
         "gitreload" :   git_c.gitreload,
         "bright"    :   ithree.bright,
         "quicksql"  :   db.quick_sql_query,
         "wmove"     :   ithree.wmove,
         "killport"  :   zsh_c.kill_port,
+        "newflask"  :   py_pr.new_flask,
+        "exponew"   :   js.expoNew,
         
     },
-    "twoArg" : {
+
+    {
         "chnpr"     :   git_c.chnpr,
         "gitimport" :   git_c.gitimport,
+        "brightfor" :   ithree.bright_for,
     }
-}
+]
 
 if __name__ == "__main__":
 
-    argtype = None
+    func_name = argv[1]
+    argtype = len(argv) - 2
 
-    if len(argv) == 2:
-        argtype = "noArg"
-        FUNC[argtype][argv[1]]()
+    if argtype == 0:
+        FUNC[argtype][func_name]()
 
-    elif len(argv) == 3:
-        argtype = "oneArg"
-        FUNC[argtype][argv[1]](argv[2])
+    elif argtype == 1:
+        FUNC[argtype][func_name](argv[2])
 
-    elif len(argv) == 4:
-        argtype = "twoArg"
-        FUNC[argtype][argv[1]](argv[2], argv[3])
+    elif argtype == 2:
+        FUNC[argtype][func_name](argv[2], argv[3])
 
     else:
         prompt("mmhh .... you're dumb.", type="warning", plus="bold")

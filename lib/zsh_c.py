@@ -73,8 +73,9 @@ def delete_pycache():
     pc_lst = pcache_lister(root_path)
 
     for cache in pc_lst:
-        prompt("Deleting {} ...".format(cache))
         sc("sudo rm -rf " + cache)
+        prompt("Deleting {} ...".format(cache))
+        
 
     if pc_lst == []:
         prompt("No pycache detected.", type="fail", plus="bold")
