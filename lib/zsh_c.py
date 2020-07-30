@@ -1,5 +1,5 @@
 from os import system as sc
-from os import getcwd, chdir, listdir
+from os import getcwd, chdir, listdir, walk
 from os.path import isdir
 import mysql.connector
 import logging
@@ -82,3 +82,33 @@ def delete_pycache():
 
     else:
         prompt("All pycaches has been deleted.", type="okgreen")
+
+
+def parse_files(root, paths=[]):
+
+    for file in listdir(root):
+
+        if file == ".git":
+            pass
+
+        else:
+            file_path = root + "/" + file
+            paths.append(file_path)
+
+            if isdir(file_path):
+                parse_files(file_path, paths=paths)
+
+    return paths
+
+def rchmod(mods, dir_name):
+
+    path = getcwd() + "/" + dir_name
+
+    if mods == None:
+        prompt("Mods invalid or missing.", type="fail", plus="bold")
+        
+    paths = parse_files(path)
+
+    for path in paths:
+        sc("sudo chmod {} {}".format(mods, path))
+        print(path)

@@ -74,6 +74,7 @@ alias delcache='fzsh delcache'
 alias brightfor='fzsh brightfor'
 alias newflask='fzsh newflask'
 alias exponew='fzsh exponew'
+alias rchmod='fzsh rchmod'
 
 #pip
 alias pip='sudo pip3'

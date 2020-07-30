@@ -44,6 +44,7 @@ FUNC = [
         "chnpr"     :   git_c.chnpr,
         "gitimport" :   git_c.gitimport,
         "brightfor" :   ithree.bright_for,
+        "rchmod"    :   zsh_c.rchmod,
     }
 ]
 
