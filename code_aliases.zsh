@@ -63,7 +63,6 @@ alias fcolors='fzsh color'
 alias mysqlscript='fzsh msqlscript'
 alias mysqlconsole='sudo mysql -h localhost -u root -p'
 alias gitapi='py ~/Documents/python-learning/API/github_API.py'
-alias xin='fzsh xin'
 alias bastion='fzsh bastion'
 alias scout='fzsh scout'
 alias quicksql='fzsh quicksql'
@@ -75,6 +74,7 @@ alias brightfor='fzsh brightfor'
 alias newflask='fzsh newflask'
 alias exponew='fzsh exponew'
 alias rchmod='fzsh rchmod'
+alias finstaller='fzsh finstaller'
 
 #pip
 alias pip='sudo pip3'
@@ -101,7 +101,7 @@ alias pgstart='sudo -i -u postgres'
 alias pgnew='sudo createdb -O neltarim'
 
 #keyboard control
-#alias xin='xinput set-prop 9 305 1'
+alias xin='xinput set-prop 10 "libinput Tapping Enabled" 1'
 alias fr='setxkbmap fr'
 alias us='setxkbmap us'
 

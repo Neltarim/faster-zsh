@@ -28,9 +28,9 @@ def aliassave():
     sc("git push origin master")
 
 def forceTapping():
-
+    # WARNING: Function Deprecated. use only "xin" alias.
     for prop in PROP_9_TAP:
-        sc("xinput set-prop 9 {} 1".format(prop))
+        sc("xinput set-prop 10 {} 1".format(prop))
 
 def apt():
     prompt("Welcome to the installer environnement.", type="okblue")

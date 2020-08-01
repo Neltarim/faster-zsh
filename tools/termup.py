@@ -7,9 +7,6 @@ def color():
     bc = bcolors()
     bc.colortest()
 
-def question(str):
-    prompt
-
 def prompt(string, type="header", plus=None):
 
     fprompt = ""

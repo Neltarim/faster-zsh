@@ -7,6 +7,7 @@ from lib import git_c
 from lib import zsh_c
 from lib import py_pr
 from lib import js
+from lib import downloader
 
 
 FUNC = [
@@ -16,7 +17,6 @@ FUNC = [
         "gitdel"    :   git_c.gitdel,
         "hardpush"  :   git_c.hardpush,
         "aliassave" :   zsh_c.aliassave,
-        "xin"       :   zsh_c.forceTapping,
         "wload"     :   ithree.workspace_loader,
         "color"     :   color,
         "aliasup"   :   zsh_c.aliasup,
@@ -26,6 +26,7 @@ FUNC = [
         "scout"     :   ithree.scout,
         "msqlreset" :   db.kill_process_list,
         "delcache"  :   zsh_c.delete_pycache,
+        "finstaller":   downloader.installer,
     },
 
     {

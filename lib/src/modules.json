@@ -1,0 +1,28 @@
+{
+    "flask": {
+        "installed": "True",
+        "apt": [
+            "test"
+        ],
+        "pip": [],
+        "npm": []
+    },
+    "Django": {
+        "installed": "False",
+        "apt": [],
+        "pip": [],
+        "npm": []
+    },
+    "React": {
+        "installed": "False",
+        "apt": [],
+        "pip": [],
+        "npm": []
+    },
+    "React Native": {
+        "installed": "False",
+        "apt": [],
+        "pip": [],
+        "npm": []
+    }
+}
