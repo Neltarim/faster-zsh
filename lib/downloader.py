@@ -21,7 +21,6 @@ class installer():
         
     def main(self):
         prompt("Welcome to the fzsh installer.\n", plus='bold')
-        prompt('What module you want to install?')
 
         mods = self.parser()
 
@@ -40,8 +39,13 @@ class installer():
 
                 print()
 
-        self.get_module(mods[0]) #let the user pick the mod
+        choice = input('What module you want to install? :')
 
+        try:
+            self.get_module(mods[choice])
+
+        except:
+            self.main()
 
         
     def parser(self):
@@ -72,10 +76,19 @@ class installer():
         with open(mods_path, 'r') as file:
             mods = json.load(file)
 
-        #download the mod
+        if mod.apt != []:
+            for apt in mod.apt:
+                sc("sudo apt-get install " + apt)
+
+        if mod.pip != []:
+            for pip in mod.pip:
+                sc("sudo python3-pip install " + pip)
+
+        if mod.npm != []:
+            for npm in mod.npm:
+                sc("sudo npm install --global " + npm)
         
         mods[mod.name]['installed'] = "True"
 
-        print(mods[mod.name])
         with open(mods_path, 'w') as file:
             json.dump(mods, file, indent=4, separators=(',', ': '))

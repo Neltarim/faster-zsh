@@ -1,9 +1,7 @@
 {
     "flask": {
-        "installed": "True",
-        "apt": [
-            "test"
-        ],
+        "installed": "False",
+        "apt": [],
         "pip": [],
         "npm": []
     },
@@ -15,14 +13,14 @@
     },
     "React": {
         "installed": "False",
-        "apt": [],
+        "apt": ["npm"],
         "pip": [],
-        "npm": []
+        "npm": ["npm","create-react-app"]
     },
     "React Native": {
         "installed": "False",
-        "apt": [],
+        "apt": ["npm"],
         "pip": [],
-        "npm": []
+        "npm": ["npm"]
     }
 }
