@@ -12,6 +12,7 @@ class module():
         self.apt = None
         self.pip = None
         self.npm = None
+        self.desc = None
 
 class installer():
 
@@ -37,9 +38,11 @@ class installer():
                 for el in tmp:
                     print("     |__" + el)
 
+                i += 1
                 print()
 
         choice = input('What module you want to install? :')
+        choice -= 1
 
         try:
             self.get_module(mods[choice])

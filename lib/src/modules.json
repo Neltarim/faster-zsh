@@ -3,24 +3,28 @@
         "installed": "False",
         "apt": [],
         "pip": [],
-        "npm": []
+        "npm": [],
+        "desc" : ""
     },
     "Django": {
         "installed": "False",
         "apt": [],
         "pip": [],
-        "npm": []
+        "npm": [],
+        "desc": ""
     },
     "React": {
         "installed": "False",
         "apt": ["npm"],
         "pip": [],
-        "npm": ["npm","create-react-app"]
+        "npm": ["npm","create-react-app"],
+        "desc": "Use \"create-react-app ProjectName\" to start a new app."
     },
     "React Native": {
         "installed": "False",
         "apt": ["npm"],
         "pip": [],
-        "npm": ["npm"]
+        "npm": ["npm", "expo-cli"],
+        "desc": "type \"expo init ProjectName\" to start a new project."
     }
 }
