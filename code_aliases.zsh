@@ -13,12 +13,12 @@ alias scanport='sudo netstat -lpn |grep'
 alias py='python3'
 alias py2='python2'
 alias supy='sudo python3'
+alias pudb='sudo pudb3'
 
 #virtualenv
 alias envnew='virtualenv -p python3 env'
 alias envstart='source env/bin/activate'
 alias envstop='deactivate'
-alias envdelete='rm -rf ./env/'
 
 #shadow
 alias shadow='~/Shadow.AppImage'
@@ -61,7 +61,6 @@ alias hardpush='fzsh hardpush'
 alias apt='fzsh apt'
 alias fcolors='fzsh color'
 alias mysqlscript='fzsh msqlscript'
-alias mysqlconsole='sudo mysql -h localhost -u root -p'
 alias gitapi='py ~/Documents/python-learning/API/github_API.py'
 alias bastion='fzsh bastion'
 alias scout='fzsh scout'
@@ -75,17 +74,23 @@ alias newflask='fzsh newflask'
 alias exponew='fzsh exponew'
 alias rchmod='fzsh rchmod'
 alias finstaller='fzsh finstaller'
+alias fgitinit="fzsh fgitinit"
+alias hrconsole='fzsh herokuconsole'
 
 #pip
 alias pip='sudo pip3'
 alias pipm='python3 -m pip3'
-alias freeze='pip3 freeze > requirements.txt'
+alias freeze='pip3 freeze > requirements.txt && cat requirements.txt'
+alias pipreq='pip install -r requirements.txt'
+
 
 #django & flask
-alias djangonew='django-admin startproject'
-alias djangostart='python3 manage.py runserver'
-alias djangomigrate='python3 manage.py migrate'
-alias newapp='django-admin startapp'
+alias dj='python3 manage.py'
+alias djnew='django-admin startproject'
+alias djstart='python3 manage.py runserver'
+alias djmigrate='python3 manage.py migrate'
+alias djnewapp='django-admin startapp'
+alias djtmpl='fzsh djtmpl'
 
 alias flask='FLASK_APP=run.py flask'
 
@@ -95,6 +100,8 @@ alias reactnew='sudo create-react-app'
 
 #mysql
 alias sqleasyscript='mysql -h localhost -u root'
+alias mysqlconsole='sudo mysql -h localhost -u root -p'
+alias mysqlreload='sudo systemctl daemon-reload && sudo systemctl restart mysql'
 
 #postgres
 alias pgstart='sudo -i -u postgres'
