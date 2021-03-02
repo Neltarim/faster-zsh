@@ -2,6 +2,12 @@ from os import system as sc
 from os import getcwd
 
 from lib.profile import FZSH_PATH
+from tools.termup import prompt
+
+
+def herokuconsole():
+    app = prompt("Heroku app name:", plus="input")
+    sc("heroku run bash --app " + app)
 
 def new_flask(name_pr):
     pr_path = getcwd()
@@ -23,8 +29,5 @@ def new_flask(name_pr):
     sc("cp {} {}views.py".format(file_to_copy, app_path))
 
     with open(pr_path + "/run.py", 'w') as file:
-        file.write("""
-from {}.views import app
+        file.write("""from {}.views import app""")
         
-if __name__ == "__main__":
-    app.run(debug=True)""".format(app_name))

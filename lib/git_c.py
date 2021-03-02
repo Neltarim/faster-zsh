@@ -1,5 +1,5 @@
 from os import system as sc
-from os import getcwd, path, chdir, listdir
+from os import getcwd, path, chdir, listdir, mkdir
 from os.path import isdir, exists
 
 from lib.profile import GIT_ROOT, PERSONAL_GIT_URL, USR_NAME
@@ -89,7 +89,7 @@ def rmpr(pr_name):
 
 
 def gitPush(com=None):
-    """Push all the files to git with origin master"""
+    """Push all the files to git with"""
 
     delete_pycache()
     
@@ -100,7 +100,7 @@ def gitPush(com=None):
 
     sc("git add *")
     sc("git commit -m {}".format(formatted))
-    sc("git push origin master")
+    sc("git push")
 
 
 def gitimport(owner, repo_name):
@@ -119,6 +119,9 @@ def gitreload(repo_name):
 
 def hardpush():
     prompt("THIS FUNCTION IS SILLY. DON'T USE IT.", type="warning", plus="bold")
+    a = input('Do it anyway? (y/any key):')
+    if a != 'y' or a != 'yes':
+        return False
     DOC_PATH = "/home/{}/Documents".format(USR_NAME)
     chdir(DOC_PATH)
     dirs = listdir(DOC_PATH)
@@ -136,3 +139,28 @@ def hardpush():
                     gitPush(com="[auto save]")
 
 
+def fgitinit():
+    """ Only use if git won't push with gitpush (not working yet ...)"""
+
+    repo_name = path.basename(getcwd())
+    prompt("basename: " + repo_name)
+
+    prompt("hub create ...")
+    sc("hub init && hub create " + repo_name)
+    chdir("../")
+
+    prompt("creating tmp directory ...")
+    mkdir("tmp")
+    prompt("copying files in tmp directory ...")
+    sc("cp -r {}/* ./tmp && sudo rm -rf {}".format(repo_name, repo_name))
+
+    prompt("git reloading ...")
+    gitreload(repo_name)
+
+    prompt("copying files into new dir ...")
+    sc("cp -r ./tmp/* " + repo_name)
+    sc('rm -rf ./tmp')
+    chdir("./" + repo_name)
+
+    prompt("Push ...")
+    gitPush()

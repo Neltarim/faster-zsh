@@ -1,5 +1,4 @@
 from os import system as sc
-from os import getcwd
 import json
 
 from tools.termup import prompt
@@ -42,7 +41,7 @@ class installer():
                 print()
 
         choice = input('What module you want to install? :')
-        choice -= 1
+        choice = int(choice) - 1
 
         try:
             self.get_module(mods[choice])
@@ -75,6 +74,8 @@ class installer():
     def get_module(self, mod):
 
         mods_path = FZSH_PATH + '/lib/src/modules.json'
+
+        prompt("Downloading {} ...".format(mod.name))
         
         with open(mods_path, 'r') as file:
             mods = json.load(file)

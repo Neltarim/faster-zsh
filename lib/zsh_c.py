@@ -88,10 +88,8 @@ def parse_files(root, paths=[]):
 
     for file in listdir(root):
 
-        if file == ".git":
-            pass
-
-        else:
+        if file != ".git":
+            
             file_path = root + "/" + file
             paths.append(file_path)
 

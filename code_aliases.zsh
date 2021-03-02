@@ -76,6 +76,7 @@ alias rchmod='fzsh rchmod'
 alias finstaller='fzsh finstaller'
 alias fgitinit="fzsh fgitinit"
 alias hrconsole='fzsh herokuconsole'
+alias djmanager='fzsh djmanager'
 
 #pip
 alias pip='sudo pip3'

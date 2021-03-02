@@ -7,7 +7,7 @@ def color():
     bc = bcolors()
     bc.colortest()
 
-def prompt(string, type="header", plus=None):
+def prompt(string, type="header", plus=None, endl='\n'):
 
     fprompt = ""
 
@@ -43,7 +43,7 @@ def prompt(string, type="header", plus=None):
     fprompt += bcolors.ENDC
 
     if plus == "input":
-        print(fprompt + string, end="")
+        print(bcolors.HEADER + string + bcolors.ENDC, end='')
         ans = input()
 
         return ans
@@ -55,7 +55,7 @@ def prompt(string, type="header", plus=None):
         return pwd
 
     else:
-        print(fprompt + string)
+        print(fprompt + string, end=endl)
 
 
 

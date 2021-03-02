@@ -2,29 +2,64 @@
     "flask": {
         "installed": "False",
         "apt": [],
-        "pip": [],
+        "pip": [
+            "virtualenv"
+        ],
         "npm": [],
-        "desc" : ""
+        "desc": ""
     },
     "Django": {
         "installed": "False",
-        "apt": [],
-        "pip": [],
+        "apt": [
+            "postgresql",
+            "python3-psycopg2"
+        ],
+        "pip": [
+            "virtualenv",
+            "Django",
+            "psycopg2",
+            "django-debug-toolbar"
+        ],
+        "npm": [],
+        "desc": ""
+    },
+    "mySQL": {
+        "installed": "True",
+        "apt": [
+            "mysql-server",
+            "mysql-client",
+            "libmysqlclient-dev",
+            "default-libmysqlclient-dev",
+            "mysql-workbench"
+        ],
+        "pip": [
+            "mysqlclient"
+        ],
         "npm": [],
         "desc": ""
     },
     "React": {
-        "installed": "False",
-        "apt": ["npm"],
+        "installed": "True",
+        "apt": [
+            "npm"
+        ],
         "pip": [],
-        "npm": ["npm","create-react-app"],
+        "npm": [
+            "npm",
+            "create-react-app"
+        ],
         "desc": "Use \"create-react-app ProjectName\" to start a new app."
     },
     "React Native": {
         "installed": "False",
-        "apt": ["npm"],
+        "apt": [
+            "npm"
+        ],
         "pip": [],
-        "npm": ["npm", "expo-cli"],
+        "npm": [
+            "npm",
+            "expo-cli"
+        ],
         "desc": "type \"expo init ProjectName\" to start a new project."
     }
 }

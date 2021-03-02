@@ -39,6 +39,8 @@ def bright_for(screen, bright_lvl):
     elif screen == "bot":
         screen = DISPLAYS[0]
 
+    formatted_lvl = None
+
     if int(bright_lvl) < 10 and int(bright_lvl) > 0:
         formatted_lvl = "0." + bright_lvl
         formatted_lvl = float(formatted_lvl)
