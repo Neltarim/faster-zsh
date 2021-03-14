@@ -43,7 +43,6 @@ alias pp='cd ~/Documents/faster-zsh/ && l'
 alias trash='cd ~/Documents/trash/ && l'
 alias safe='cd ~/Documents/safezone/ && l'
 alias web='cd ~/Documents/websites-clients/PCwebsite/ && l'
-
 alias retry='py ~/Documents/project_5/purBeurre/uninstall.py && py ~/Documents/project_5/purBeurre/install.py'
 
 #faster zsh

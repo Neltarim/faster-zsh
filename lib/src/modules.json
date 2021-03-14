@@ -9,7 +9,7 @@
         "desc": ""
     },
     "Django": {
-        "installed": "False",
+        "installed": "True",
         "apt": [
             "postgresql",
             "python3-psycopg2"
