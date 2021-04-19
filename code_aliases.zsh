@@ -104,7 +104,7 @@ alias mysqlconsole='sudo mysql -h localhost -u root -p'
 alias mysqlreload='sudo systemctl daemon-reload && sudo systemctl restart mysql'
 
 #postgres
-alias pgstart='sudo -i -u postgres'
+alias pgstart='sudo -u postgres psql'
 alias pgnew='sudo createdb -O neltarim'
 
 #keyboard control
@@ -119,3 +119,4 @@ alias iload='i3-resurrect restore -w'
 alias chrome='i3-resurrect restore -w 2'
 alias logout='gnome-session-quit'
 alias autosleep='xset -dpms'
+alias settings='env XDG_CURRENT_DESKTOP=GNOME gnome-control-center'
