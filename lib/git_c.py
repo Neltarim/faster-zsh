@@ -70,11 +70,11 @@ def chnpr(old, new):
     chdir(new_path)
     sc("hub init && hub create")
     gitPush("fresh name !")
-
     if exists(new_path + "/.gitignore"):
         pass
         
     else:
+        print('asshole')
         gitignore(auto=True)
 
 
