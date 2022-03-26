@@ -8,6 +8,13 @@ alias aliassave='py ~/Documents/faster-zsh/alias_starter.py aliassave'
 alias wifi='nmcli'
 alias wifisaved='nmcli c'
 alias scanport='sudo netstat -lpn |grep'
+alias wifiscan='sudo arp-scan --interface=wlp1s0 --localnet'
+alias ipscan='sudo nmap -sV -O -T4 '
+alias myip='ip -4 a show dev wlp1s0'
+
+
+#MetaSploit
+alias metasploit='msfconsole'
 
 #python
 alias py='python3'
@@ -37,13 +44,8 @@ alias mk='mkdir'
 alias doc='cd ~/Documents/ && l'
 alias term='gnome-terminal'
 alias aliasup='py ~/Documents/faster-zsh/alias_starter.py aliasup'
-alias ap='cd ~/Documents/Project_5/ && l'
-alias learn='cd ~/Documents/python-learning/advanced && l'
 alias pp='cd ~/Documents/faster-zsh/ && l'
 alias trash='cd ~/Documents/trash/ && l'
-alias safe='cd ~/Documents/safezone/ && l'
-alias web='cd ~/Documents/websites-clients/PCwebsite/ && l'
-alias retry='py ~/Documents/project_5/purBeurre/uninstall.py && py ~/Documents/project_5/purBeurre/install.py'
 
 #faster zsh
 alias fzsh='py ~/Documents/faster-zsh/alias_starter.py'
